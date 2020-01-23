@@ -12,13 +12,13 @@ function App() {
   };
 
   const [images, setImages] = useState([]);
+  const [searchString, setSearchString] = useState('minions');
 
   useEffect(() => {
     getImages();
   }, []);
 
   function getImages() {
-    const searchString = 'minions';
     /* Build a URL from the searchOptions object */
     const url = `${searchOptions.api}${searchOptions.endpoint}?api_key=${searchOptions.key}&q=${searchString} &limit=${searchOptions.limit}&offset=${searchOptions.offset}&rating=${searchOptions.rating}&lang=en`;
 
@@ -30,10 +30,23 @@ function App() {
       .catch(console.error);
   }
 
+  function handleChange(event) {
+    setSearchString(event.target.value);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    getImages();
+  }
+
   return (
     <div>
       <h1>Giphy Searcher</h1>
-      <SearchForm />
+      <SearchForm
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        searchString={searchString}
+      />
       <SearchResults images={images} />
     </div>
   );
