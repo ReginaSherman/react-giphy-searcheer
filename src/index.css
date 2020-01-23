@@ -11,6 +11,7 @@
   --secondary: #ff7f50;
   --secondary-light: #ffa483;
   --white: #fff;
+  --muted: #a1a1a1;
 }
 
 /* Remove the body margin */
@@ -41,6 +42,18 @@ input + button {
 }
 
 form {
+  padding: 1rem 0;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 1rem 0;
 }
 
@@ -81,6 +94,10 @@ input:hover {
   display: flex;
 }
 
+.muted {
+  color: var(--muted);
+}
+
 /* Add a media query to add more space between
 the button and input when the browser is at least
 600px wide */
@@ -96,6 +113,10 @@ the button and input when the browser is at least
 }
 
 @media (min-width: 1000px) {
+  header {
+    align-items: center;
+    flex-direction: row;
+  }
   .gallery {
     column-count: 3;
   }
