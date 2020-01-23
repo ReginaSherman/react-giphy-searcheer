@@ -44,6 +44,11 @@ form {
   padding: 1rem 0;
 }
 
+img {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
 /* Style the input and tell it to grow */
 input {
   background-color: var(--secondary-light);
@@ -83,5 +88,21 @@ the button and input when the browser is at least
   button + button,
   input + button {
     margin-left: 1rem;
+  }
+
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1000px) {
+  .gallery {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1400px) {
+  .gallery {
+    column-count: 4;
   }
 }
