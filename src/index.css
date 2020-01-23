@@ -11,7 +11,7 @@
   --secondary: #ff7f50;
   --secondary-light: #ffa483;
   --white: #fff;
-  --muted: #a1a1a1;
+  --muted: #949494;
 }
 
 /* Remove the body margin */
@@ -92,6 +92,25 @@ input:hover {
 .form-horizontal {
   align-items: center;
   display: flex;
+}
+
+.brand {
+  align-items: center;
+  display: flex;
+  width: auto;
+}
+
+.brand img {
+  height: 2rem;
+  margin: 0 0.5rem 0 0;
+  width: auto;
+}
+
+.brand h1 {
+  font-weight: 200;
+  letter-spacing: -1px;
+  margin-right: 1rem;
+  white-space: nowrap;
 }
 
 .muted {
