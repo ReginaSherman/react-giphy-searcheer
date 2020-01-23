@@ -13,7 +13,7 @@ function SearchResults(props) {
     <div className="gallery">
       {images.map(image => (
         <div key={image.id} className="gif">
-          <img src={image.url} />
+          <img src={image.images.downsized_large.url} />
         </div>
       ))}
     </div>
