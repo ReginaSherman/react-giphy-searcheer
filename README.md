@@ -257,7 +257,7 @@ const images = [
   },
   {
     id: 6,
-    url: 'https://buffer.com/library/wp-content/uploads/2016/06/giphy.gif'
+    url: 'https://media.giphy.com/media/rkeQ3E1BUy2J2/giphy.gif'
   },
   {
     id: 7,
